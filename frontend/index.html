@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Μικελάντζελο</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="flex-container">
+    <header>
+      <h1>Μικελάντζελο ντι Λοντοβίκο Μπουοναρότι Σιμόνι</h1>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="#" data-section="biography">Βιογραφία</a></li>
+        <li><a href="#" data-section="paintings">Πίνακες</a></li>
+        <li><a href="#" data-section="exhibitions">Εκθέσεις</a></li>
+        <li><a href="#" data-section="links">Σύνδεσμοι</a></li>
+        <li><a href="#" data-section="management">Διαχείριση</a></li>
+      </ul>
+    </nav>
+    
+    <div class="main-container">
+      <aside>
+        <div id="aside-biography" class="hidden">
+          <ul>
+            <li><a href="#" data-category="early-years">Πρώτα Χρόνια</a></li>
+            <li><a href="#" data-category="years-rome">Ρώμη</a></li>
+            <li><a href="#" data-category="last-years">Τελευταία χρόνια</a></li>
+          </ul>
+        </div>
+        <div id="aside-paintings" class="hidden">
+          <ul>
+            <li><a href="#" data-category="portraits">Πίνακες</a></li>
+            <li><a href="#" data-category="religious">Εκκλησιαστικά Έργα</a></li>
+          </ul>
+        </div>
+        <div id="aside-exhibitions" class="hidden">
+          <p>Επιλέξτε έκθεση από την παρακάτω λίστα.</p>
+        </div>
+        <div id="aside-links" class="hidden">
+          <ul>
+            <li><a href="#" data-category="web-links">Σύνδεσμοι</a></li>
+            <li><a href="#" data-category="books">Βιβλιογραφία</a></li>
+          </ul>
+        </div>
+        <div id="aside-management">
+          <div id="loginFormContainer">
+              <h2>Σύνδεση Χρήστη</h2>
+              <form id="loginForm" onsubmit="login(event)">
+                  <label for="username">Όνομα Χρήστη:</label>
+                  <input type="text" id="username" placeholder="Εισάγετε το όνομα χρήστη σας" required>
+                  <label for="password">Κωδικός:</label>
+                  <input type="password" id="password" placeholder="Εισάγετε τον κωδικό σας" required>
+                  <button type="submit">Σύνδεση</button>
+              </form>
+          </div>
+          
+          <div id="loggedInContainer" class="hidden">
+              <div id="managementMenu" class="management-container hidden">
+                  <h1 class="welcome-message">Καλώς ήρθες!</h1>
+                  
+                  <div class="management-options">
+                      <a href="#" id="manageExhibitions" class="management-link management-option">
+                          <div class="management-card">
+                              <h3>Διαχείριση Εκθέσεων</h3>
+                          </div>
+                      </a>
+                      <a href="#" id="manageLinks" class="management-link management-option">
+                          <div class="management-card">
+                              <h3>Διαχείριση Συνδέσμων</h3>
+                          </div>
+                      </a>
+                  </div>
+                  
+                  <button id="logoutButton" class="logout-button" onclick="logout()">Αποσύνδεση</button>
+              </div>
+          </div>
+      </div>
+      </aside>
+      
+      <main>
+        <section id="content">
+        </section>
+      </main>
+    </div>
+    
+    <footer>
+      <p>© 2025 - Project Michelangelo</p>
+    </footer>
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/fetchData.js"></script>
+  <script type="module" src="js/auth.js"></script>  
+</body>
+</html>
