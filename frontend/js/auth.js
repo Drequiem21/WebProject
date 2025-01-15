@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:10000";
+const API_URL = "https://webproject-5rtv.onrender.com";
 // Είσοδος χρήστη
 async function login(event) {
      // Προσθέστε αυτό για να σταματήσει το form submission
